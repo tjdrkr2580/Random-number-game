@@ -9,14 +9,17 @@ let secret_number = 0;
 let GAME_START = false;
 
 function timerCheck() {
+    timer.innerText = `TIME: ${second}`;
     let time = setInterval(function () {
-        second--;
         timer.innerText = `TIME: ${second}`;
+        second--;
         if (second == 0) {
+            clearInterval(time);
             stopGame();
+        }
+        if (number.value == secret_number) {
             clearInterval(time);
         }
-
     }, 1000)
 }
 
@@ -34,12 +37,10 @@ function stopGame() {
     start.disabled = false;
 }
 
-
-function numberIf(){
-    if(number.value > secret_number){
+function numberIf() {
+    if (number.value > secret_number) {
         updown.innerText = `DOWN!`;
-    }
-    else if(number.value < secret_number){
+    } else if (number.value < secret_number) {
         updown.innerText = `UP!`;
     }
 }
@@ -47,7 +48,6 @@ function numberIf(){
 function gameClear() {
     updown.innerText = `Correct!`;
     stopGame();
-    clearInterval(time);
 }
 
 function numberGame() {
@@ -55,6 +55,9 @@ function numberGame() {
         numberIf();
         if (number.value == secret_number) {
             gameClear();
+        } else if (second == 0) {
+            updown.innerText = `YOU LOSE...`;
+            stopGame();
         }
     }
 }
