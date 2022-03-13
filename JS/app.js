@@ -29,7 +29,7 @@ function gameStart() {
     timerCheck();
     start.disabled = true;
 }
-
+    
 function stopGame() {
     GAME_START = false;
     second = 30;
