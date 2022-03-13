@@ -1,30 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Random-number-game</title>
-    <link rel="stylesheet" href="CSS/styles.css">
-</head>
-<body>
-    <div class="game_form">
-        <div class="name_form">
-            <h1>RANDUM NUMBER GAME</h1>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Random-number-game</title>
+        <link rel="stylesheet" href="CSS/styles.css">
+    </head>
+    <body>
+        <div class="game_form">
+            <div class="name_form">
+                <h1>랜덤 숫자 맞추기</h1>
+            </div>
+            <div class="info_form">
+                <span id="time">TIME : 30</span>
+                <span id="up_down" style="color: red;"></span>
+            </div>
+            <div class="input_form">
+                <input type="number" id="input_number">
+                <button type="submit" id="submit">CHECK</button>
+            </div>
+            <div class="play_form">
+                <button id="start">GAME START</button>
+            </div>
         </div>
-        <div class="info_form">
-            <span class="time">time : 0</span>
-            <span class="up_down">UP !</span>
-        </div>
-        <div class="input_form">
-            <form action="#"></form>
-            <input type="number" id="input_number">
-            <button type="submit">Check</button>
-        </div>
-        <div class="play_form">
-            <button id="start">Game Start!</button>
-        </div>
-    </div>
-    <script src="JS/app.js"></script>
-</body>
+        <script src="JS/app.js"></script>
+    </body>
 </html>
